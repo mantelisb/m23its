@@ -1,10 +1,8 @@
 steps:
-  - name: 'gradle:6.9.1-jdk11'
-    entrypoint: 'gradle'
-    args: ['clean', 'build', '-x', 'test']
-   
+
+  - name: 'gcr.io/cloud-builders/gradle'
+    args: ['build']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'europe-central2-docker.pkg.dev/itacademy-379505/firstdocker/m23its:$COMMIT_SHA', '.']
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'europe-central2-docker.pkg.dev/itacademy-379505/firstdocker/m23its:$COMMIT_SHA']
+    args: ['build', '--tag=gcr.io/itacademy-379505/spring-boot', '.']
+  images: ['gcr.io/itacademy-379505/spring-boot']
 
