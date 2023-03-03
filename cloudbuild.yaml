@@ -1,10 +1,7 @@
 steps:
 
   - name: 'gcr.io/cloud-builders/gradle'
-    args: ['clean', 'build', '-x', 'test']
-    
-  - name: 'gcr.io/cloud-builders/jib'
-    entrypoint: 'jib'
-    args: ['--image=gcr.io/itacademy-379505/m23its', '--image-tag=latest']
+    args: ['clean', 'build', 'jib', '-x', 'test']
+
 
 
