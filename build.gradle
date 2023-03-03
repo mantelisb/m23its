@@ -14,7 +14,7 @@ jib {
         image = 'adoptopenjdk:11-jre-hotspot'
     }
     to {
-        image = 'gcr.io/itacademy-379505/m23its:$COMMIT_SHA'
+        image = 'gcr.io/itacademy-379505/m23its'
         tags = ['latest']
     }
     container {
