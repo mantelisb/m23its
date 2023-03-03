@@ -14,7 +14,7 @@ jib {
         image = 'adoptopenjdk:11-jre-hotspot'
     }
     to {
-        image = 'europe-central2-docker.pkg.dev/itacademy-379505/firstdocker/m23its:$COMMIT_SHA'
+        image = 'gcr.io/itacademy-379505/m23its:$COMMIT_SHA'
         tags = ['latest']
     }
     container {
