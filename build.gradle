@@ -14,7 +14,7 @@ jib {
         image = 'adoptopenjdk:11-jre-hotspot'
     }
     to {
-        image = 'gcr.io/itacademy-379505/m23its'
+        image = 'gcr.io/direct-volt-377222/m23its'
         tags = ['latest']
     }
     container {

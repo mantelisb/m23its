@@ -6,7 +6,7 @@ steps:
   - name: "gcr.io/cloud-builders/gke-deploy"
     args:
     - run
-    - --image=gcr.io/itacademy-379505/m23its:latest
+    - --image=gcr.io/direct-volt-377222/m23its:latest
     - --location=europe-central2
     - --cluster=autopilot-cluster-1
 
