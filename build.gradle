@@ -2,7 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.4.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
-	id 'com.google.cloud.tools.jib' version '3.1.3'
+	id 'com.google.cloud.tools.jib' version '3.3.1'
 }
 
 group = 'com.example'
@@ -14,7 +14,7 @@ jib {
         image = 'adoptopenjdk:11-jre-hotspot'
     }
     to {
-        image = 'm23its'
+        image = 'europe-central2-docker.pkg.dev/itacademy-379505/firstdocker/m23its:$COMMIT_SHA'
         tags = ['latest']
     }
     container {
