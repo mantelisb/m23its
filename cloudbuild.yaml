@@ -1,0 +1,4 @@
+steps:
+  - name: 'gradle:6.9.1-jdk11'
+    entrypoint: 'gradle'
+    args: ['clean', 'build', '-x', 'test']
