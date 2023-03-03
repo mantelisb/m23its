@@ -1,8 +1,10 @@
 steps:
 
   - name: 'gcr.io/cloud-builders/gradle'
-    args: ['build']
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '--tag=gcr.io/itacademy-379505/spring-boot', '.']
-  images: ['gcr.io/itacademy-379505/spring-boot']
+    args: ['clean', 'build', '-x', 'test']
+    
+  - name: 'gcr.io/cloud-builders/jib'
+    entrypoint: 'jib'
+    args: ['--image=gcr.io/itacademy-379505/m23its', '--image-tag=latest']
+
 
